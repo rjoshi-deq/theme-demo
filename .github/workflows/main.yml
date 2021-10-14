@@ -9,8 +9,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: octokit/request-action@v2.x
-        with:
-          route: GET https://api.countapi.xyz/hit/wow/niceeeerw
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: "curl -s google.com"
