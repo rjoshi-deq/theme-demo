@@ -12,9 +12,9 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: deploy
         with:
-          route: GET https://api.countapi.xyz/hit/wow/nice
+          route: GET https://api.countapi.xyz/hit/wow/niceeee
           owner: octokit
           repo: request-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: "echo latest release: ${{ steps.get_latest_release.outputs.data }}"
+      - run: "echo latest release: ${{ steps.deploy }}"
