@@ -6,14 +6,12 @@ on:
       - staging
 
 jobs:
-  logLatestRelease:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: octokit/request-action@v2.x
         id: deploy
         with:
           route: GET https://api.countapi.xyz/hit/wow/niceeeer
-          owner: octokit
-          repo: request-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
